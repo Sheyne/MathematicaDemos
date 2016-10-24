@@ -1,0 +1,304 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11547,        295]
+NotebookOptionsPosition[     11106,        274]
+NotebookOutlinePosition[     11458,        290]
+CellTagsIndexPosition[     11415,        287]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "you", " ", "can", " ", "substitute", " ", "any", " ", "function", " ", 
+      "of", " ", "t", " ", "for", " ", "the", " ", "line", " ", "the", " ", 
+      "is", " ", "\[Gamma]"}], "=."}], ".."}], "*)"}], "\[IndentingNewLine]", 
+  
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ParametricPlot", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Module", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\[Gamma]", "=", 
+          RowBox[{
+           RowBox[{"I", " ", 
+            RowBox[{"Sin", "[", "t", "]"}]}], "+", 
+           RowBox[{"Cos", "[", "t", "]"}]}]}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Re", "[", "\[Gamma]", "]"}], ",", 
+          RowBox[{"Im", "[", "\[Gamma]", "]"}]}], "}"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "tmax"}], "}"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"tmax", ",", 
+        RowBox[{"\[Pi]", "/", "2"}]}], "}"}], ",", "0.01", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.686330372505185*^9, 3.6863304602859287`*^9}, {
+  3.686330500810788*^9, 3.686330580353125*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`tmax$$ = 2.4859977445391115`, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`tmax$$], Rational[1, 2] Pi}, 0.01, 2 Pi}}, 
+    Typeset`size$$ = {360., {101., 106.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`tmax$51734$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`tmax$$ = Rational[1, 2] Pi}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`tmax$$, $CellContext`tmax$51734$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ParametricPlot[
+        Module[{$CellContext`\[Gamma] = 
+          I Sin[$CellContext`t] + Cos[$CellContext`t]}, {
+          Re[$CellContext`\[Gamma]], 
+          Im[$CellContext`\[Gamma]]}], {$CellContext`t, 
+         0, $CellContext`tmax$$}], 
+      "Specifications" :> {{{$CellContext`tmax$$, Rational[1, 2] Pi}, 0.01, 2 
+         Pi}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {159., 164.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.6863304470648317`*^9, 3.686330460948688*^9}, {
+   3.686330506797266*^9, 3.686330518673461*^9}, 3.686330582722158*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "I", " ", "suggest", " ", "plugging", " ", "in", " ", "the", " ", 
+    "identity", " ", "function", " ", "and", " ", "seeing", " ", "what", " ", 
+    "that", " ", "does"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"funcToPlot", "[", "z_", "]"}], ":=", "z"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"funcToPlot", "[", "z_", "]"}], ":=", 
+    SuperscriptBox["\[ExponentialE]", "z"]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "the", " ", "below", " ", "sets", " ", "up", " ", "a", " ", "grid", " ",
+        "of", " ", "points", " ", "z"}], "=", 
+      RowBox[{"x", "+", "iy"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"such", " ", "that", " ", "xmin"}], "\[LessEqual]", "x", 
+      "\[LessEqual]", 
+      RowBox[{
+      "xmax", " ", "and", " ", "there", " ", "are", " ", "5", " ", "points", 
+       " ", "along", " ", "the", " ", "x", " ", 
+       RowBox[{"dimension", ".", " ", "Additionally"}], " ", "0"}], 
+      "\[LessEqual]", "y", "\[LessEqual]", 
+      RowBox[{
+      "ymax", " ", "and", " ", "these", " ", "points", " ", "are", " ", 
+       "spaced", " ", "out", " ", "by", " ", 
+       RowBox[{"0.1", ".", " ", "Each"}], " ", "point", " ", "z", " ", "is", 
+       " ", "passed", " ", "to", " ", "some", " ", "function", " ", 
+       "`funcToPlot`", " ", 
+       RowBox[{"(", 
+        RowBox[{"defined", " ", "above"}], ")"}], " ", "and", " ", "then", 
+       " ", "the", " ", "z", " ", "points", " ", "are", " ", "plotted", " ", 
+       "on", " ", "the", " ", "cartesian", " ", 
+       RowBox[{"plane", ".", " ", "Sliders"}], " ", "are", " ", "added", " ", 
+       "to", " ", "allow", " ", "the", " ", "user", " ", "to", " ", "specify",
+        " ", "xmin"}]}], ",", " ", "xmax", ",", " ", 
+     RowBox[{"and", " ", 
+      RowBox[{"ymax", "."}]}]}], "\[IndentingNewLine]", "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"ListPlot", "[", "\[IndentingNewLine]", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{"Function", "[", 
+         RowBox[{"z", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Re", "[", "z", "]"}], ",", 
+            RowBox[{"Im", "[", "z", "]"}]}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Map", "[", 
+         RowBox[{"funcToPlot", ",", "\[IndentingNewLine]", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{"Outer", "[", 
+             RowBox[{
+              RowBox[{"Function", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"x", ",", "y"}], "}"}], ",", 
+                RowBox[{"x", "+", 
+                 RowBox[{"\[ImaginaryI]", " ", "y"}]}]}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Table", "[", 
+               RowBox[{"x", ",", 
+                RowBox[{"{", 
+                 RowBox[{"x", ",", "xmin", ",", "xmax", ",", 
+                  RowBox[{"Max", "[", 
+                   RowBox[{"0.01", ",", 
+                    FractionBox[
+                    RowBox[{"xmax", "-", "xmin"}], "5"]}], "]"}]}], "}"}]}], 
+               "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Table", "[", 
+               RowBox[{"y", ",", 
+                RowBox[{"{", 
+                 RowBox[{"y", ",", "0", ",", "ymax", ",", "0.1"}], "}"}]}], 
+               "]"}]}], "]"}], ",", "\[IndentingNewLine]", " ", "1"}], 
+           "]"}]}], "]"}]}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"xmin", ",", "0"}], "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"xmax", ",", "1"}], "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"ymax", ",", 
+         RowBox[{"4", 
+          RowBox[{"\[Pi]", "/", "5"}]}]}], "}"}], ",", "0", ",", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.686329463178919*^9, 3.686329493941454*^9}, {
+  3.686329699197461*^9, 3.686330133381199*^9}, {3.686330194637151*^9, 
+  3.686330366072287*^9}, {3.68633066284205*^9, 3.686330784169664*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`xmax$$ = 
+    0.7975763320922852, $CellContext`xmin$$ = 0, $CellContext`ymax$$ = 
+    3.7139454532109815`, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`xmin$$], 0}, 0, 2}, {{
+       Hold[$CellContext`xmax$$], 1}, 0, 2}, {{
+       Hold[$CellContext`ymax$$], Rational[4, 5] Pi}, 0, 2 Pi}}, 
+    Typeset`size$$ = {360., {109., 114.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`xmin$59269$$ = 0, $CellContext`xmax$59270$$ = 
+    0, $CellContext`ymax$59271$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`xmax$$ = 1, $CellContext`xmin$$ = 
+        0, $CellContext`ymax$$ = Rational[4, 5] Pi}, "ControllerVariables" :> {
+        Hold[$CellContext`xmin$$, $CellContext`xmin$59269$$, 0], 
+        Hold[$CellContext`xmax$$, $CellContext`xmax$59270$$, 0], 
+        Hold[$CellContext`ymax$$, $CellContext`ymax$59271$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ListPlot[
+        Map[
+         Function[$CellContext`z, {
+           Re[$CellContext`z], 
+           Im[$CellContext`z]}], 
+         Map[$CellContext`funcToPlot, 
+          Flatten[
+           Outer[
+            
+            Function[{$CellContext`x, $CellContext`y}, $CellContext`x + 
+             I $CellContext`y], 
+            
+            Table[$CellContext`x, {$CellContext`x, $CellContext`xmin$$, \
+$CellContext`xmax$$, 
+              Max[0.01, ($CellContext`xmax$$ - $CellContext`xmin$$)/5]}], 
+            
+            Table[$CellContext`y, {$CellContext`y, 0, $CellContext`ymax$$, 
+              0.1}]], 1]]]], 
+      "Specifications" :> {{{$CellContext`xmin$$, 0}, 0, 
+         2}, {{$CellContext`xmax$$, 1}, 0, 
+         2}, {{$CellContext`ymax$$, Rational[4, 5] Pi}, 0, 2 Pi}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {222., 227.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.686330114391096*^9, 3.686330133717085*^9}, {
+  3.686330691011814*^9, 3.686330709650277*^9}, {3.686330764594894*^9, 
+  3.686330784671637*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1359, 37, 114, "Input"],
+Cell[1942, 61, 1925, 39, 340, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3904, 105, 4359, 104, 423, "Input"],
+Cell[8266, 211, 2824, 60, 500, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
